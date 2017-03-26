@@ -15,7 +15,8 @@
 		<serenity.version>1.1.39</serenity.version>
 		<serenity.maven.version>1.1.21</serenity.maven.version>
 		<serenity.jbehave.version>1.13.0</serenity.jbehave.version>
-		<webdriver.driver>phantomjs</webdriver.driver>
+		<webdriver.driver>chrome</webdriver.driver>
+		<webdriver.chrome.driver>/media/narendra/WORK/LIBRARIES_AND_UTILS/chromedriver</webdriver.chrome.driver>
 	</properties>
 
 	<dependencies>

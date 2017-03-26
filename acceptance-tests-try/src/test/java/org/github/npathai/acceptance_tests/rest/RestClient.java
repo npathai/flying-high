@@ -16,4 +16,8 @@ public class RestClient {
 		list.add(new Airport("Los Angeles", "LAX", "USA"));
 		return list;
 	}
+
+	public List<Airport> findAllAirports() {
+		return findAllAirports("rest/api/airports");
+	}
 }

@@ -20,3 +20,11 @@ Then I should obtain at least the following:
 | Australia | Brisbane      | BNE    |
 | USA       | San Francisco | SFO    |
 | USA       | Los Angeles   | LAX    |
+
+Scenario: Display available destinations on the home page
+Meta:
+@tag layer:web
+
+Given I need to know what cities I can fly to
+When I go to the home page
+Then I should see the list of possible destinations
