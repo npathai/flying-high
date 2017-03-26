@@ -41,6 +41,6 @@ public class AirportStepDefinitions {
 			expected.add(DisplayedAirport.fromMapValues(airportFields));
 		}
 		
-		assertThat(retrievedAirports).isEqualTo(expected);
+		assertThat(retrievedAirports).contains(expected.toArray());
 	}
 }

@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+import { AirportService } from './service/airport.service';
+
 const appRoutes = [
   {path: '', component: HomeComponent },
   {path: 'home', component: HomeComponent },
@@ -31,7 +33,9 @@ const appRoutes = [
     RouterModule.forRoot(appRoutes),
     DropdownModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    AirportService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,10 +2,13 @@ package org.github.npathai.acceptance_tests.domain;
 
 public class Airport {
 
-	private final String name;
-	private final String code;
-	private final String country;
+	private String name;
+	private String code;
+	private String country;
 
+	public Airport() {
+	}
+	
 	public Airport(String name, String code, String country) {
 		this.name = name;
 		this.code = code;
@@ -54,5 +57,15 @@ public class Airport {
 		return "Airport [name=" + name + ", code=" + code + ", country=" + country + "]";
 	}
 
-	
+	public String getName() {
+		return name;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public String getCountry() {
+		return country;
+	}
 }

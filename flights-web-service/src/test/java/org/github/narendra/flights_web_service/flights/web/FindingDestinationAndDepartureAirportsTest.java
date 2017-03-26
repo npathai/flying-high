@@ -1,18 +1,17 @@
 package org.github.narendra.flights_web_service.flights.web;
 
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+
 import java.util.List;
 
 import org.github.narendra.flights_web_service.FlightsApp;
-import org.github.narendra.flights_web_service.database.DatabaseSetup;
 import org.github.narendra.flights_web_service.domain.Airport;
-import static org.hamcrest.CoreMatchers.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.embedded.EmbeddedWebApplicationContext;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.core.ParameterizedTypeReference;
@@ -26,12 +25,6 @@ import org.springframework.web.client.RestTemplate;
 @RunWith(SpringJUnit4ClassRunner.class)
 public class FindingDestinationAndDepartureAirportsTest {
 
-	@Autowired
-	private EmbeddedWebApplicationContext server;
-	
-	@Autowired
-	private DatabaseSetup databaseSetup;
-	
 	private RestTemplate rest = new RestTemplate();
 	
 	@Value("${local.server.port}")
