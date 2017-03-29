@@ -6,5 +6,5 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(collectionResourceRel = "airports", path = "airports")
 public interface AirportRepository extends MongoRepository<Airport, String> {
-
+	Airport findByCode(String name);
 }

@@ -8,6 +8,7 @@ import org.github.narendra.flights_web_service.repository.AirportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -23,6 +24,11 @@ public class AirportsController {
 	public List<Airport> listAllAirports() {
 		List<Airport> airports = airportRepository.findAll();
 		return airports;
+	}
+	
+	@RequestMapping("/rest/api/airports/search/findByCode")
+	public Airport getAirportByCode(@RequestParam("code") String code) {
+		return airportRepository.findByCode(code);
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/rest/api/airports/reset")

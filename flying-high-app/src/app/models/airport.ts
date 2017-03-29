@@ -8,4 +8,12 @@ export class Airport {
     this.code = code;
     this.country = country;
   }
+
+  getCode() : string {
+    return this.code;
+  }
+
+  getName() : string {
+    return this.name;
+  }
 }

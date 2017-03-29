@@ -3,17 +3,15 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.github.narendra</groupId>
-	<artifactId>flights-web-service</artifactId>
+	<artifactId>accounts-web-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>flights-web-service</name>
+	<name>accounts-web-service</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
@@ -114,7 +112,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>org.github.narendra.flights_web_service.FlightsApp</mainClass>
+							<mainClass>org.github.narendra.accounts_web_service.AccountsApp</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -125,7 +123,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>org.github.narendra.flights_web_service.FlightsApp</mainClass>
+							<mainClass>org.github.narendra.accounts_web_service.AccountsApp</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
@@ -133,19 +131,19 @@
 					</descriptorRefs>
 				</configuration>
 			</plugin>
-
+			
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>1.5.2.RELEASE</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.5.2.RELEASE</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 </project>
